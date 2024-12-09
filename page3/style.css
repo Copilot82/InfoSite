@@ -1,0 +1,800 @@
+/* Устанавливаем box-sizing для всех элементов */
+* {
+    box-sizing: border-box;
+}
+
+/* Основной блок */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    width: 80%;
+    padding: 40px;
+    color: #e0e0e0;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+.text_baz {
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text_baz h1 {
+    font-family: 'Merriweather', serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 36px;
+    color: #f5f5f5;
+}
+
+.t_block1, .t_block2 {
+    width: 90%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2e2e2e;
+    margin-top: 40px;
+    height: auto;
+    padding-left: 70px;
+}
+
+.t_block1 h2, .t_block2 h2 {
+    position: relative;
+    font-size: 24px;
+    margin-left: 0px;
+    color: #add8e6;
+    font-family: 'Lora', serif;
+}
+
+.t_block1 h2::after, .t_block2 h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(173,216,230,1) 50%, rgba(255,255,255,0) 100%);
+}
+
+
+.t_block1 p, .t_block2 p {
+    font-size: 16px;
+    width: 700px;
+    color: #e8e8e8;
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 10% 0;
+}
+
+.crd_c {
+    position: relative;
+    width: var(--card-width);
+    margin: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(65, 45, 75, 0.5) 50%, rgba(14, 10, 42, 0.5) 50%);
+    color: #ffffff84;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 80px 0;
+    transition: all 0.5s ease;
+    position: relative; /* Для абсолютного позиционирования псевдоэлементов */
+}
+
+.card:hover {
+    background: linear-gradient(to right, rgba(65, 45, 75, 1) 50%, rgba(14, 10, 42, 1) 50%);
+    color: #ffffff;
+    transform: scale(1.1);
+    border: none;
+}
+
+/* Анимация рамки вокруг .card */
+.card:hover::before,
+.card:hover::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 2px #BFE2FF;
+    animation: anim-border-card 8s linear infinite;
+    z-index: 1; /* Рамка сверху карточки */
+}
+
+.card:hover::before {
+    animation-delay: -4s;
+}
+
+@keyframes anim-border-card {
+    0%, 100% {
+        clip: rect(0px, var(--card-width), 6px, 0px);
+    }
+    25% {
+        clip: rect(0px, 6px, var(--card-height), 0px);
+    }
+    50% {
+        clip: rect(var(--card-height), var(--card-width), var(--card-height), 0px);
+    }
+    75% {
+        clip: rect(0px, var(--card-width), var(--card-height), calc(var(--card-width) - 6px));
+    }
+}
+
+:root {
+    --card-width: 300px;
+    --card-height: 450px;
+}
+
+@media (max-width: 1600px) {
+    :root {
+        --card-width: 280px;
+        --card-height: 420px;
+    }
+}
+
+@media (max-width: 1300px) {
+    :root {
+        --card-width: 240px;
+        --card-height: 370px;
+    }
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --card-width: 190px;
+        --card-height: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --card-width: 140px;
+        --card-height: 230px;
+    }
+}
+
+@media (max-width: 700px) {
+    :root {
+        --card-width: 180px;
+        --card-height: 250px;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --card-width: 120px;
+        --card-height: 200px;
+    }
+}
+
+
+
+
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 300px;
+}
+
+/* Стили для содержимого */
+.content h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a75ff;
+    margin: 0;
+}
+
+.content h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content p {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content button {
+    
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+   }
+
+.content button h1{
+    color: #1a1a2e;
+    font-weight: bold;
+    font-size: 13px;
+    transition: all 0.5s ease;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    pointer-events: none;
+}
+
+
+
+.content button:hover{
+    background-color: rgb(255, 145, 48);
+}
+
+
+
+
+
+
+/* Корректировки для экранов до 1600px */
+@media (max-width: 1600px) {
+    .text_baz {
+        width: 100%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .text_baz h1 {
+        font-family: 'Merriweather', serif;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 36px;
+        color: #f5f5f5;
+    }
+    
+    .t_block1, .t_block2 {
+        width: 90%;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #2e2e2e;
+        margin-top: 40px;
+        height: auto;
+        padding-left: 70px;
+    }
+    
+    .t_block1 h2, .t_block2 h2 {
+        position: relative;
+        font-size: 24px;
+        margin-left: 0px;
+        color: #add8e6;
+        font-family: 'Lora', serif;
+    }
+    
+    
+    .t_block1 p, .t_block2 p {
+        font-size: 16px;
+        width: 700px;
+        color: #e8e8e8;
+        font-family: 'Open Sans', Arial, sans-serif;
+        line-height: 1.6;
+    }
+    
+    
+    
+    .cards {
+        width: 90%;
+        margin: 10% 0;
+    }
+    
+    .crd_c {
+        width: 280px; /* Установим ширину контейнера по размеру самой карточки */
+    }
+    
+    .card {
+        height: 420px;
+        padding: 14px;
+        padding: 50px 0;
+    } 
+    
+    
+    
+    .content{
+        width: 75%;
+        height: 290px;
+    }
+    
+    /* Стили для содержимого */
+    .content h2 {
+        font-size: 1.9rem;
+    }
+    
+    .content h3 {
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
+    
+    .content p {
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+    
+    .content button {
+        
+        margin-top: 12px;
+        padding: 8px 18px;
+
+       }
+    
+    .content button h1{
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    
+}
+
+/* Корректировки для экранов до 1300px */
+@media (max-width: 1300px) {
+    .text_baz {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    
+    .text_baz h1 {
+
+        width: 100%;
+        font-size: 36px;
+    }
+    
+    .t_block1, .t_block2 {
+        width: 90%;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 40px;
+        padding-left: 70px;
+    }
+    
+    .t_block1 h2, .t_block2 h2 {
+        font-size: 24px;
+        margin-left: 0px;
+    }
+    
+    
+    .t_block1 p, .t_block2 p {
+        font-size: 16px;
+        width: 700px;
+        line-height: 1.6;
+    }
+    
+    
+    
+    .cards {
+        justify-content: space-between;
+        width: 90%;
+        margin: 10% 0;
+    }
+    
+    .crd_c {
+        position: relative;
+        width: 240px; /* Установим ширину контейнера по размеру самой карточки */
+    }
+    
+    .card {
+        height: 370px;
+        padding: 14px;
+        padding: 50px 0;
+    } 
+    
+    
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        height: 240px;
+    }
+    
+    /* Стили для содержимого */
+    .content h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: #1a75ff;
+        margin: 0;
+    }
+    
+    .content h3 {
+        text-align: center;
+        font-size: 1rem;
+        margin: 8px 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .content p {
+        text-align: center;
+        font-size: 0.7rem;
+        line-height: 1.2;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .content button {
+        
+        margin-top: 11px;
+        padding: 8px 18px;
+
+       }
+    
+    .content button h1{
+        font-weight: bold;
+        font-size: 13px;
+    }
+}
+
+/* Корректировки для экранов до 1000px */
+@media (max-width: 1100px) {
+    .text_baz h1 {
+
+        width: 100%;
+        font-size: 32px;
+    }
+    
+    .t_block1, .t_block2 {
+        width: 90%;
+        padding: 30px 17px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 37px;
+        padding-left: 50px;
+    }
+    
+    .t_block1 h2, .t_block2 h2 {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+    
+    
+    .t_block1 p, .t_block2 p {
+        font-size: 13px;
+        width: 550px;
+        line-height: 1.4;
+    }
+
+    .t_block1 h2::after, .t_block2 h2::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 40px;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(173,216,230,1) 50%, rgba(255,255,255,0) 100%);
+    }
+    
+    
+    
+    .cards {
+        justify-content: space-between;
+        width: 90%;
+        margin: 10% 0;
+    }
+    
+    .crd_c {
+        position: relative;
+        width: 190px; /* Установим ширину контейнера по размеру самой карточки */
+    }
+    
+    .card {
+        height: 300px;
+        padding: 14px;
+        padding: 50px 0;
+    } 
+    
+    
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        height: 190px;
+    }
+    
+    /* Стили для содержимого */
+    .content h2 {
+        text-align: center;
+        font-size: 1.3rem;
+        color: #1a75ff;
+        margin: 0;
+    }
+    
+    .content h3 {
+        text-align: center;
+        font-size: 0.8rem;
+        margin: 8px 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .content p {
+        text-align: center;
+        font-size: 0.6rem;
+        line-height: 1.2;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .content button {
+        
+        margin-top: 9px;
+        padding: 7px 16px;
+
+       }
+    
+    .content button h1{
+        font-weight: bold;
+        font-size: 10px;
+    }
+}
+
+/* Корректировки для экранов до 800px */
+@media (max-width: 1000px) {
+    .text_baz h1 {
+
+        width: 100%;
+        font-size: 29px;
+    }
+    
+    .t_block1, .t_block2 {
+        width: 90%;
+        padding: 27px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-top: 30px;
+        padding-left: 30px;
+    }
+    
+    .t_block1 h2, .t_block2 h2 {
+        font-size: 16px;
+        margin-left: 0px;
+    }
+    
+    
+    .t_block1 p, .t_block2 p {
+        font-size: 10px;
+        width: 400px;
+        line-height: 1.4;
+    }
+
+    .t_block1 h2::after, .t_block2 h2::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 30px;
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(173,216,230,1) 50%, rgba(255,255,255,0) 100%);
+    }
+    
+    
+    
+    
+    .cards {
+        justify-content: space-between;
+        width: 90%;
+        margin: 10% 0;
+    }
+    
+    .crd_c {
+        position: relative;
+        width: 140px; /* Установим ширину контейнера по размеру самой карточки */
+    }
+    
+    .card {
+        height: 230px;
+        padding: 14px;
+        padding: 30px 0;
+    } 
+    
+    
+    
+    .content{
+        width: 80%;
+        height: 170px;
+        justify-content: space-around;
+    }
+    
+    /* Стили для содержимого */
+    .content h2 {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #1a75ff;
+        margin: 0;
+    }
+    
+    .content h3 {
+        text-align: center;
+        font-size: 0.6rem;
+        margin: 8px 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    .content p {
+        text-align: center;
+        font-size: 0.5rem;
+        line-height: 1.1;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .content button {
+        
+        margin-top: 9px;
+        padding: 6px 13px;
+
+       }
+    
+    .content button h1{
+        font-weight: bold;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .text_baz h1 {
+        font-size: 28px;
+    }
+
+    .t_block1, .t_block2 {
+        width: 100%;
+        padding: 30px 15px;
+        padding-left: 30px;
+    }
+
+    .t_block1 h2, .t_block2 h2 {
+        font-size: 20px;
+    }
+
+    .t_block1 p, .t_block2 p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crd_c {
+        width: 100%;
+        max-width: 180px;
+        margin: 20px;
+    }
+
+    .card {
+        height: 250px;
+        padding: 40px 0;
+    } 
+
+    .content {
+        width: 80%;
+        height: 170px;
+    }
+
+    .content h2 {
+        font-size: 1.0rem;
+    }
+
+    .content h3 {
+        font-size: 0.7rem;
+    }
+
+    .content p {
+        font-size: 0.5rem;
+        line-height: 1.2;
+    }
+
+    .content button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .content button h1 {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .text_baz h1 {
+        font-size: 24px;
+    }
+
+    .t_block1, .t_block2 {
+        width: 100%;
+        padding: 20px 10px;
+        padding-left: 20px;
+    }
+
+    .t_block1 h2, .t_block2 h2 {
+        font-size: 18px;
+    }
+
+    .t_block1 p, .t_block2 p {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crd_c {
+        width: 100%;
+        max-width: 120px;
+    }
+
+    .card {
+        height: 200px;
+        padding: 30px 0;
+    }
+
+    .content {
+        width: 85%;
+        height: 140px;
+    }
+
+    .content h2 {
+        font-size: 1rem;
+    }
+
+    .content h3 {
+        font-size: 0.8rem;
+    }
+
+    .content p {
+        font-size: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .content button {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .content button h1 {
+        font-size: 9px;
+    }
+}

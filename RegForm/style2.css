@@ -1,0 +1,157 @@
+/* Стили для контейнера профиля */
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Стили для заголовка */
+.profile-container h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+h2, h3, h4, h5, h6 {
+    color: #000;
+}
+/* Стили для информации о пользователе */
+.user-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.user-info h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.user-info p strong {
+    display: inline-block;
+    width: 150px;
+    color: #333;
+}
+
+/* Стили для формы смены пароля */
+.change-password {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.change-password h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.change-password .form-group {
+    margin-bottom: 15px;
+}
+
+.change-password label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.change-password input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.change-password button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.change-password button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Стили для сообщений */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.message.error {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+.message.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+/* Плавные переходы для кнопок */
+.change-password button[type="submit"],
+.logout-button {
+    transition: background-color 0.3s ease;
+}
+
+/* Тень для секций */
+.user-info,
+.change-password {
+    background-color: #f9f9f9;
+    color: #000; /* Устанавливаем чёрный цвет текста */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Стили для кнопки выхода из аккаунта */
+.logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #d9534f;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #c9302c;
+}
+
+/* Общие стили для форм */
+input:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+@media (max-width: 600px) {
+    .user-info p {
+        display: block;
+    }
+
+    .user-info p strong {
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    .logout-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .change-password button[type="submit"] {
+        width: 100%;
+    }
+}

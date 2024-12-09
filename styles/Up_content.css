@@ -1,0 +1,1260 @@
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--header-background);
+    width: 100%;
+    height: 250px;
+    padding-bottom: 40px;
+}
+
+.header2 h1 {
+    font-family: 'Handjet', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+.header2 p {
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.nav2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    height: 190px;
+}
+
+.nav_block2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 190px;
+}
+
+.nav-links2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links2  li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+}
+
+.nav-links2  li a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.img_nav{
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+.icons-sites > div.icon_s1{
+    overflow: visible !important;
+}
+
+/* Стало */
+.icons-sites > div.icon_s1,
+.icons-sites > div.icon_s2,
+.icons-sites > div.icon_s3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Применяем только к иконкам */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: lowercase;
+    transition: all 1s ease;
+    position: relative; /* Чтобы потомки могли позиционироваться относительно родителя */
+    overflow: hidden; /* Убедимся, что выпадающий список не обрезается */
+}
+
+
+div::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+}
+
+
+
+.nav_block1{
+    width: 90%;
+    display: none;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+
+.nav_block1 img{
+    cursor: pointer;
+}
+
+.menu-icon:hover + .nav1_text,
+.nav1_text:hover {
+    opacity: 1;
+    max-height: 300px;
+    pointer-events:all; 
+}
+.nav1_text{
+    position: absolute;
+    background-color: #000000;
+    color: aliceblue;
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    opacity:0;
+    pointer-events: none; /* Клики проходят сквозь наложение */
+    overflow: hidden;
+    max-height: 0px;
+    top: 0;
+    transition: all ease 0.5s;
+}
+
+.nav_texts a{
+    color: aliceblue;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.nav_texts a:hover{
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff9408;
+    transform: scale(1.1);
+    transition: all ease 0.3s;
+}
+
+
+
+.nav_texts{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100px;
+}
+
+
+
+
+
+
+div.gradient:hover {
+    color: white;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+}
+
+.icon_s1 {
+    -webkit-transform: perspective(1px) translateZ(0);
+    background: #000000;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-timing-function: ease;
+    transition-duration: 0.4ss;
+}
+
+.icon_s1:before{
+    background: linear-gradient(to bottom, #f81101, #f77e7e);
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: 0.5s ease;
+}
+
+.icon_s1:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+
+.icon_s2 h1{
+    text-decoration: none;
+    font-family: "Nunito", serif;
+    font-weight: 700;
+    font-size: 27px;
+    color: white;
+}
+
+
+.icon_s2 {
+    -webkit-transform: perspective(1px) translateZ(0);
+    background: #000000;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-timing-function: ease;
+    transition-duration: 0.4ss;
+}
+
+.icon_s2:before{
+    background: linear-gradient(to bottom, #fdaf08, #ae1370);
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: 0.5s ease;
+}
+
+.icon_s2:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+
+
+.icon_s3 {
+    -webkit-transform: perspective(1px) translateZ(0);
+    background: #000000;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-timing-function: ease;
+    transition-duration: 0.4ss;
+}
+
+.icon_s3:before{
+    background: linear-gradient(to bottom, #40ecf1, #08aa61);
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: 0.5s ease;
+}
+
+.icon_s3:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+.img_nav{
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+.nav_icons{
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 20px;
+    margin: 10px 10px;
+}
+
+.nav_icons div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    text-transform: lowercase;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.icons-sites {
+    width: 300px; /* Можете установить нужную ширину */
+    display: flex;
+    justify-content: space-between;
+    position: relative; /* Важно для позиционирования выпадающего списка */
+}
+
+
+
+
+
+
+
+div.gradient:hover {
+    color: white;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.6);
+    transform: translateY(-5px);
+}
+
+.icon_s1 {
+    -webkit-transform: perspective(1px) translateZ(0);
+    background: #000000;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-timing-function: ease;
+    /* Исправляем опечатку в transition-duration */
+    transition-duration: 0.4s;
+    display: inline-block;
+}
+
+.icon_s1:before {
+    /* Добавляем content */
+    content: "";
+    background: none ;
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    /* Добавляем transition-property для анимации */
+    transition: transform 0.5s ease;
+}
+
+.icon_s1:hover:before {
+    transform: scaleY(1);
+}
+
+/* Стили для иконки уведомлений */
+.icon_s1.notification-icon {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Красная точка для непрочитанных уведомлений */
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    min-width: 10px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Скрыть счетчик, если нет непрочитанных уведомлений */
+.notification-count.hidden {
+    display: none;
+}
+
+/* Выпадающий список уведомлений */
+.notification-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: -45px;
+    width: 450px;
+    height: 370px; /* Задаем фиксированную высоту */
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+    overflow: hidden;
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification-header {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notification-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Отображаем окно при добавлении класса show */
+.notification-dropdown.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Контейнер для всего содержимого в окне уведомлений */
+.notification-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Занимает всю высоту всплывающего окна */
+}
+
+/* Контейнер для списка уведомлений */
+.notifications-list-container {
+    width: 100%;
+    flex: 1; /* Занимает все доступное пространство между заголовком и кнопками */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+/* Стили для сообщения об отсутствии уведомлений */
+#notifications-list .empty-message {
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+
+.notification-buttons .button {
+    width: 100px; /* Фиксированная ширина кнопки */
+    height: 40px;  /* Фиксированная высота кнопки */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    background-color: var(--button-background);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+}
+
+.notification-buttons .button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Дополнительные стили для плавности */
+.icon_s1:hover + .notification-dropdown,
+.notification-dropdown:hover {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для списка уведомлений */
+#notifications-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#notifications-list li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    color: #ddd; /* Исходный цвет текста */
+    background-color: transparent; /* Исходный фон */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#notifications-list li:hover {
+    background-color: #000; /* Чёрный фон при наведении */
+    color: #fff;            /* Белый текст при наведении */
+}
+
+/* Обновляем цвета вложенных элементов при наведении */
+#notifications-list li:hover .notification-message,
+#notifications-list li:hover .notification-time {
+    color: #fff; /* Белый цвет текста при наведении */
+}
+
+/* Оставляем исходные стили для вложенных элементов */
+.notification-message {
+    font-size: 14px;
+    color: inherit; /* Наследуем цвет текста от родителя */
+}
+
+/* Скрываем индикатор уведомлений, если нет новых */
+.notification-count.hidden {
+    display: none;
+}
+
+/* Кнопки под уведомлениями */
+.notification-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Стиль для иконки внутри уведомления */
+.notification-item-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.notification-item-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Текст уведомления */
+.notification-text {
+    margin-left: 10px;
+    flex: 1;
+    color: #fff;
+}
+
+/* Время уведомления */
+.notification-time {
+    font-size: 12px;
+    color: inherit; /* Наследуем цвет текста от родителя */
+    margin-top: 5px;
+}
+
+.icon_s1.notification-icon:hover .notification-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Отображаем меню при наведении на иконку уведомления */
+.icon_s1:hover + .notification-dropdown,
+.notification-dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+#notifications-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#notifications-list li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+#notifications-list li:hover {
+    background-color: #181818;
+}
+
+/* Определяем CSS-переменные для удобства управления цветами */
+:root {
+    --background-color: #171c3d;
+    --header-background: #161616;
+    --text-color: #dcdcdc;
+    --primary-color: #7289da;
+    --secondary-color: #2c2f33;
+    --accent-color: #ff1e1e;
+    --border-color: #444;
+    --hover-background: #3a3d42;
+    --button-background: #7289da;
+    --button-hover: #5b6eae;
+}
+
+/* Для браузеров на основе WebKit (Chrome, Safari, Opera, Edge) */
+.notifications-list-container::-webkit-scrollbar {
+    width: 8px;  /* Ширина вертикальной полосы прокрутки */
+    height: 8px; /* Высота горизонтальной полосы прокрутки, если нужна */
+}
+
+.notifications-list-container::-webkit-scrollbar-track {
+    background: var(--secondary-color); /* Фон трека прокрутки */
+    border-radius: 2px;                 /* Скругленные углы трека */
+}
+
+.notifications-list-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color); /* Цвет бегунка прокрутки */
+    border-radius: 2px;                     /* Скругленные углы бегунка */
+    border: 2px solid var(--secondary-color); /* Промежуток вокруг бегунка */
+}
+
+.notifications-list-container::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-hover); /* Цвет при наведении на бегунок */
+}
+
+/* Для Firefox */
+.notifications-list-container {
+    scrollbar-width: thin; /* Делаем полосу прокрутки тоньше */
+    scrollbar-color: var(--primary-color) var(--secondary-color); /* Цвет бегунка и трека */
+}
+
+
+.icon_s2 h1{
+    text-decoration: none;
+    font-family: "Nunito", serif;
+    font-weight: 700;
+    font-size: 27px;
+    color: white;
+}
+
+
+.icon_s2 {
+    -webkit-transform: perspective(1px) translateZ(0);
+    background: #000000;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-timing-function: ease;
+    transition-duration: 0.4s;
+}
+
+.icon_s2:before {
+    content: "";
+    background: linear-gradient(to bottom, #fdaf08, #ae1370);
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: transform 0.5s ease;
+}
+
+.icon_s2:hover:before {
+    transform: scaleY(1);
+}
+
+
+
+
+.icon_s3 {
+    -webkit-transform: perspective(1px) translateZ(0);
+    background: #000000;
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    transition-timing-function: ease;
+    transition-duration: 0.4ss;
+}
+
+.icon_s3:before{
+    background: linear-gradient(to bottom, #40ecf1, #08aa61);
+    transform: scaleY(0);
+    transform-origin: 0% 0%;
+    transition: 0.5s ease;
+}
+
+.icon_s3:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+
+
+
+/* Увеличиваем размеры иконок для экранов шире 1700px */
+@media (min-width: 1700px) {
+    /* Увеличиваем размеры контейнера иконок */
+    .icons-sites {
+        width: 350px; /* Увеличиваем ширину контейнера для размещения больших иконок */
+    }
+    
+    /* Увеличиваем размеры самих иконок */
+    .icons-sites > div.icon_s1,
+    .icons-sites > div.icon_s2,
+    .icons-sites > div.icon_s3 {
+        width: 70px; /* Новая ширина иконок */
+        height: 70px; /* Новая высота иконок */
+    }
+    
+    /* При необходимости увеличиваем размер изображений внутри иконок */
+    .icons-sites img.img_nav {
+        width: 50px; /* Увеличиваем размер изображения внутри иконки */
+        height: auto;
+    }
+}
+
+
+
+/* Шапка */
+@media (max-width: 1700px) {
+    .body_page2{
+        background-color: #171c3d;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .header2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #161616;
+        width: 100%;
+        height: 200px;
+        padding-bottom: 40px;
+    }
+    
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 2.2em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 1.0em;
+        color: #dcdcdc;
+    }
+    
+    
+    .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 190px;
+    }
+    
+    .nav-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-links2  li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 160px;
+        height: 45px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    }
+    
+    .nav-links2  li a{
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    .icons-sites{
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+
+
+    
+    .icon_s2 h1{
+        text-decoration: none;
+        font-family: "Nunito", serif;
+        font-weight: 700;
+        font-size: 25px;
+        color: white;
+    }
+    
+
+}
+
+
+
+@media (max-width: 1500px) {
+    .body_page2{
+        background-color: #171c3d;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .header2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #161616;
+        width: 100%;
+        height: 180px;
+        padding-bottom: 40px;
+    }
+    
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 2.0em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 0.8em;
+        color: #dcdcdc;
+    }
+    
+    
+    .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 190px;
+    }
+    
+    .nav-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-links2  li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 130px;
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    }
+    
+    .nav-links2  li a{
+        color: white;
+        font-size: 12px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    .icons-sites{
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+
+    
+    .icon_s2 h1{
+        text-decoration: none;
+        font-family: "Nunito", serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: white;
+    }
+
+    .img_nav{
+        width: 25px;
+    }
+    
+
+}
+
+
+@media (max-width: 1200px) {
+    .body_page2{
+        background-color: #171c3d;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .header2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #161616;
+        width: 100%;
+        height: 150px;
+        padding-bottom: 40px;
+    }
+    
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 1.8em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 0.7em;
+        color: #dcdcdc;
+    }
+    
+    
+    .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 190px;
+    }
+    
+    .nav-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-links2  li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 110px;
+        height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    }
+    
+    .nav-links2  li a{
+        color: white;
+        font-size: 10px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    .icons-sites{
+        width: 190px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
+
+    
+    .icon_s2 h1{
+        text-decoration: none;
+        font-family: "Nunito", serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: white;
+    }
+
+    .img_nav{
+        width: 20px;
+    }
+
+    .header2{
+        height: 130px;
+        padding-bottom: 40px;
+    }
+    
+
+}
+
+
+
+@media (max-width: 1000px) {
+    .body_page2{
+        background-color: #171c3d;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .header2{
+        height: 100px;
+        padding-bottom: 40px;
+    }
+    
+    
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 1.7em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 0.6em;
+        color: #dcdcdc;
+    }
+    
+    
+    .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 170px;
+    }
+    
+    .nav-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-links2  li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 90px;
+        height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    }
+    
+    .nav-links2  li a{
+        color: white;
+        font-size: 9px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    .icons-sites{
+        width: 160px;
+    }
+    
+    
+
+    
+    .icon_s2 h1{
+        text-decoration: none;
+        font-family: "Nunito", serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: white;
+    }
+
+    .img_nav{
+        width: 20px;
+    }
+    
+
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .header2{
+        height: 90px;
+        padding-bottom: 40px;
+    }
+    
+    
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 1.4em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 0.6em;
+        color: #dcdcdc;
+    }
+    
+    
+    .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+    }
+    
+    .nav-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+    }
+    
+    .nav-links2  li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 80px;
+        height: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    }
+    
+    .nav-links2  li a{
+        color: white;
+        font-size: 6px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    .icons-sites{
+        width: 130px;
+    }
+    
+    
+
+    
+    .icon_s2 h1{
+        text-decoration: none;
+        font-family: "Nunito", serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: white;
+    }
+
+    .img_nav{
+        width: 20px;
+    }
+    
+
+}
+
+
+
+
+@media (max-width: 700px) {
+
+    .nav_block1{
+        display: flex;
+    }
+    .nav_block2{
+        display: none;
+    }
+
+    .header2{
+        height: 90px;
+        padding-bottom: 40px;
+    }
+    
+    
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 1.4em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 0.6em;
+        color: #dcdcdc;
+    }
+    
+    
+    .nav2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 40px;
+        margin-bottom: 20px;
+        padding-left: 40px;
+    }
+    
+    .nav-links2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+        padding-left: 0px;
+    }
+    
+    .nav-links2  li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 70px;
+        height: 25px;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    }
+    
+    .nav-links2  li a{
+        color: white;
+        font-size: 6px;
+        text-decoration: none;
+        text-align: center;
+    
+    }
+    
+    .icons-sites{
+        width: 90px;
+    }
+    
+    
+
+    
+    .icon_s2 h1{
+        text-decoration: none;
+        font-family: "Nunito", serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: white;
+    }
+
+    .img_nav{
+        width: 15px;
+    }
+    
+
+}
+
+
+
+
+@media (max-width: 500px) {
+    .header2{
+        height: 70px;
+        padding-bottom: 10px;
+    }
+    
+    .notification-dropdown {
+        width: 90vw;
+        right: 5vw;
+    }
+
+    .header2 h1 {
+        font-family: 'Handjet', sans-serif;
+        font-size: 1em;
+        margin-bottom: 0;
+        color: #dcdcdc;
+    }
+    
+    .header2 p {
+        font-size: 0.2em;
+        color: #dcdcdc;
+    }
+    
+
+}
+
+
